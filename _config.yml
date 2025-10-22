@@ -1,7 +1,7 @@
 title: "FIXON — Handyman in New York"
 description: "Trusted handyman services in New York City: flooring, tile, painting, furniture assembly, curtains, and general home repairs."
 url: "https://alex11832.github.io"
-baseurl: "/fixon.com"
+baseurl: "/Fixon"
 plugins:
   - jekyll-sitemap
 
