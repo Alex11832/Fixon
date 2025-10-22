@@ -1,0 +1,39 @@
+{% assign c = site.data.company %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "{{ c.name }}",
+  "image": "{{ site.url }}{{ '/assets/images/hero-fixon.jpg' | relative_url }}",
+  "telephone": "{{ c.phone }}",
+  "email": "{{ c.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "New York",
+    "addressRegion": "NY",
+    "addressCountry": "US"
+  },
+  "areaServed": "New York City and nearby areas",
+  "url": "{{ site.url }}{{ '/' | relative_url }}",
+  "sameAs": []
+}
+</script>
+
+<!-- FAQPage duplication for SEO -->
+{% if site.data.faq and site.data.faq.size > 0 %}
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {% for item in site.data.faq %}
+    {
+      "@type":"Question",
+      "name":"{{ item.q | escape }}",
+      "acceptedAnswer":{"@type":"Answer","text":"{{ item.a | escape }}"}
+    }{% if forloop.last == false %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

@@ -1,0 +1,14 @@
+<div class="container header">
+  <a class="logo" href="{{ '/' | relative_url }}" aria-label="FIXON — home">
+    FIXON
+  </a>
+  <nav class="nav" role="navigation" aria-label="Primary">
+    <ul class="nav-list">
+      <li><a href="{{ '/' | relative_url }}#services">Services</a></li>
+      <li><a href="{{ '/' | relative_url }}#benefits">Why Us</a></li>
+      <li><a href="{{ '/' | relative_url }}#faq">FAQ</a></li>
+      <li><a href="{{ '/' | relative_url }}#contact">Contact</a></li>
+      <li><a class="cta-btn" href="tel:{{ site.data.company.phone | replace: '-', '' }}">Call {{ site.data.company.phone }}</a></li>
+    </ul>
+  </nav>
+</div>
