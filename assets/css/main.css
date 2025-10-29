@@ -4012,3 +4012,15 @@ input, select, textarea {
     padding: 2rem 1.5rem;
   }
 }
+/* На устройствах без hover (мобильные): никаких "наведений" для показа содержимого */
+@media (hover: none) {
+  .tiles article::before { opacity: .45; }               /* стандартное затемнение Forty */
+  .tiles article .major { opacity: 1; transform: none; } /* текст сразу виден */
+  .tiles article .image { display: none !important; }    /* если остались <span class="image"> */
+}
+
+/* Снижаем вероятность iOS long-press preview */
+.tiles article a.link.primary { 
+  touch-action: manipulation; 
+  -webkit-tap-highlight-color: transparent;
+}

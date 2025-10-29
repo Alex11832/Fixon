@@ -1,33 +1,62 @@
-<section id="contacts" class="contacts container">
-  <h2 class="section-title">Contact Us</h2>
-  <form class="contact-form" method="post">
-    <label>
-      <span>Name</span>
-      <input type="text" name="name" required autocomplete="name">
-    </label>
-    <label>
-      <span>Phone</span>
-      <input type="tel" name="phone" required autocomplete="tel">
-    </label>
-    <label>
-      <span>Comment</span>
-      <textarea name="message" rows="4" placeholder="Tell us briefly about your task"></textarea>
-    </label>
-    <button type="submit" class="cta-btn">Send</button>
-  </form>
+<!-- _includes/contacts.html -->
+<section id="contact">
+  <div class="inner">
+    <section>
+      <header class="major">
+        <h2>Contact Us</h2>
+      </header>
+      <form method="post" action="#" class="contact-form">
+        <div class="fields">
+          <div class="field half">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="field half">
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone" placeholder="Your Phone" required>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="5" placeholder="How can we help?"></textarea>
+          </div>
+        </div>
+        <ul class="actions">
+          <li><input type="submit" value="Send Message" class="primary"></li>
+          <li><input type="reset" value="Clear"></li>
+        </ul>
+      </form>
+    </section>
 
-  <div class="contact-meta">
-    <p>
-      <img src="{{ site.baseurl }}/assets/icons/phone.svg" alt="Phone icon" width="18" height="18">
-      <a href="tel:+13475551234">+1 (347) 555-1234</a>
-    </p>
-    <p>
-      <img src="{{ site.baseurl }}/assets/icons/location.svg" alt="Location pin icon" width="18" height="18">
-      New York, USA
-    </p>
-    <p>
-      <img src="{{ site.baseurl }}/assets/icons/mail.svg" alt="Envelope icon" width="18" height="18">
-      <a href="mailto:hello@fixon.example">hello@fixon.example</a>
-    </p>
+    <section class="split">
+      <!-- Email -->
+      <section>
+        <div class="contact-method">
+          <span class="icon solid alt fa-envelope"></span>
+          <h3>Email</h3>
+          <a href="mailto:khusanj11@gmail.com">khusanj11@gmail.com</a>
+        </div>
+      </section>
+
+      <!-- Phone -->
+      <section>
+        <div class="contact-method">
+          <span class="icon solid alt fa-phone"></span>
+          <h3>Phone</h3>
+          <span><a href="tel:+15135164075">+1 (513) 516-4075</a></span>
+        </div>
+      </section>
+
+      <!-- Address -->
+      <section>
+        <div class="contact-method">
+          <span class="icon solid alt fa-home"></span>
+          <h3>Address</h3>
+          <span>
+            New York, NY<br>
+            United States
+          </span>
+        </div>
+      </section>
+    </section>
   </div>
 </section>
