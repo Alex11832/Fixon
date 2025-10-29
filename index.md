@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "FIXON — Handyman in New York"
-description: "Responsive landing based on Forty by HTML5 UP, adapted to Jekyll."
+description: "Repairs, installation, and decoration with precision and style."
 ---
 {% include hero.html %}
 {% include tiles.html %}
