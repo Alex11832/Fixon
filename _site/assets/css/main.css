@@ -3950,3 +3950,65 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+
+
+/* MY ADDS */
+
+/* --- FIXON: Restore full-height image for textblock sections --- */
+
+/* Основной контейнер секции */
+.spotlights > section {
+  display: flex;
+  align-items: stretch; /* растягивает картинку и текст на всю высоту */
+  min-height: 550px; /* можно менять (500–700px оптимально) */
+  overflow: hidden;
+}
+
+/* Картинка */
+.spotlights > section .image {
+  flex: 1;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlights > section .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* сохраняет пропорции и заполняет всё пространство */
+  display: block;
+}
+
+/* Контент */
+.spotlights > section .content {
+  flex: 1;
+  display: flex;
+  align-items: center; /* центрируем текст по вертикали */
+  background-color: #1b2330; /* как у Forty — контрастный фон */
+  color: #ffffff;
+  padding: 4rem 3rem;
+}
+
+.spotlights > section .content .inner {
+  max-width: 520px;
+}
+
+/* На мобильных — складываем вертикально */
+@media screen and (max-width: 980px) {
+  .spotlights > section {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .spotlights > section .image,
+  .spotlights > section .content {
+    flex: none;
+    width: 100%;
+    height: auto;
+  }
+  .spotlights > section .image img {
+    height: auto;
+  }
+  .spotlights > section .content {
+    padding: 2rem 1.5rem;
+  }
+}
