@@ -1,0 +1,27 @@
+<!-- _includes/hero.html -->
+<section id="banner" class="major" style="background-image:url('./images/hero.webp');">
+  <div class="inner">
+    <header class="major">
+      <h1>{{ site.contact.company }} — {{ site.contact.tagline }}</h1>
+    </header>
+
+    <div class="content">
+      <p>
+        We turn your ideas into comfort and beauty for your home.<br>
+      </p>
+
+	   <a href="#contact" class="button next scrolly">
+			<span class="icon solid fa-phone" aria-hidden="true"></span>
+			{{ site.contact.primary_cta }}
+    	</a>
+
+      <!-- Intrinsic size helper to stabilize CLS (скрыт визуально, но задаёт размеры) -->
+      <img
+        src="./images/hero.webp"
+        alt="FIXON handyman services in New York — home repair, installation, decoration"
+        width="1920" height="1080"
+        fetchpriority="high" decoding="async"
+        style="position:absolute; inset:0; width:100%; height:100%; opacity:0; pointer-events:none;">
+    </div>
+  </div>
+</section>

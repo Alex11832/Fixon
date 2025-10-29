@@ -1,0 +1,24 @@
+title: "FIXON — Handyman in New York"
+description: "Professional home repair, installation and decoration across NYC."
+url: "https://alex11832.github.io"
+baseurl: "/Fixon"
+markdown: kramdown
+permalink: pretty
+timezone: America/New_York
+theme: null
+
+# Контактные данные (редактируются здесь)
+contact:
+  company: "FIXON"
+  tagline: "Your Trusted Handyman in New York"
+  phone_display: "513-516-4075"
+  phone_link: "+15135164075"
+  email: "khusanj11@gmail.com"
+  city: "New York"
+  region: "NY"
+  area: "New York City and nearby areas"
+  geo:
+    lat: 40.7128
+    lng: -74.0060
+  primary_cta: "Get a free estimate"
+  secondary_cta: "See services"
