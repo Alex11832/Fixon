@@ -1,15 +1,18 @@
-title: "FIXON — Handyman in New York"
+title: "ONIITO — Handyman in New York"
+company: "ONIITO"
 description: "Professional home repair, installation and decoration across NYC."
-url: "https://alex11832.github.io"
-baseurl: "/Fixon"
+url: "https://oniito.com/"
+baseurl: ""
 markdown: kramdown
-permalink: pretty
+permalink: /:path/:basename:output_ext
 timezone: America/New_York
 theme: null
-
+css_v: 1.0.0
+js_v: 1.0.1
+ 
 # Контактные данные (редактируются здесь)
 contact:
-  company: "FIXON"
+  company: "ONIITO"
   tagline: "Your Trusted Handyman in New York"
   phone_display: "513-516-4075"
   phone_link: "+15135164075"
@@ -22,3 +25,4 @@ contact:
     lng: -74.0060
   primary_cta: "Get a free estimate"
   secondary_cta: "See services"
+  

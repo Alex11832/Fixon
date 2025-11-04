@@ -99,7 +99,7 @@
 		});
 
 	// Clear transitioning state on unload/hide.
-		$window.on('unload pagehide', function() {
+		$window.on('pagehide', function() {
 			window.setTimeout(function() {
 				$('.is-transitioning').removeClass('is-transitioning');
 			}, 250);

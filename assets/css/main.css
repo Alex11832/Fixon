@@ -2198,6 +2198,9 @@ input, select, textarea {
 
 			.image.fit img {
 				width: 100%;
+				height:auto;
+				max-height:720px;
+				object-fit:contain;
 			}
 
 		.image.main {
@@ -2207,7 +2210,10 @@ input, select, textarea {
 		}
 
 			.image.main img {
-				width: 100%;
+				width:100%;
+				height:auto;
+				max-height:720px;
+				object-fit:contain;
 			}
 
 			@media screen and (max-width: 736px) {

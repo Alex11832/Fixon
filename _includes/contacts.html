@@ -1,52 +1,123 @@
-<section id="contact">
+<!-- Contact section -->
+<section id="contact" class="wrapper">
   <div class="inner">
+
     <section>
-      <header class="major">
-        <h2>Contact Us</h2>
-      </header>
-      <form method="post" action="#">
+      <form id="tg-form" method="post" action="#" novalidate>
         <div class="fields">
           <div class="field half">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Your Name" required>
+            <input type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Your Name"
+                  autocomplete="name"
+                  required>
           </div>
+
           <div class="field half">
             <label for="phone">Phone</label>
-            <input type="tel" name="phone" id="phone" placeholder="Your Phone" required>
+            <input type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="Your Phone"
+                  autocomplete="tel"
+                  required>
           </div>
+
+          <div class="field half">
+            <label for="email">Email <span style="opacity:.7">(optional)</span></label>
+            <input type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Your Email (optional)"
+                  autocomplete="email">
+          </div>
+
           <div class="field">
             <label for="message">Message</label>
-            <textarea name="message" id="message" rows="5" placeholder="How can we help?"></textarea>
+            <textarea name="message"
+                      id="message"
+                      rows="5"
+                      placeholder="How can we help?"
+                      autocomplete="off"></textarea>
           </div>
         </div>
+
+        <!-- honeypot -->
+        <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;">
+
+        <input type="hidden" name="page_url" value="{{ page.url | absolute_url }}">
+        <input type="hidden" name="page" value="{{ page.title | escape }}">
+
         <ul class="actions">
           <li><input type="submit" value="Send Message" class="primary"></li>
         </ul>
       </form>
+
     </section>
 
+    <!-- Contact details -->
+
     <section class="split">
-      <section>
-        <div class="contact-method">
-          <span class="icon solid alt fa-envelope"></span>
-          <h3>Email</h3>
-          <a href="mailto:khusanj11@gmail.com">khusanj11@gmail.com</a>
-        </div>
+        <section>
+          <div class="contact-method">
+            <span class="icon solid alt fa-envelope"></span>
+            <h3>Email</h3>
+            <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+          </div>
+        </section>
+        <section>
+          <div class="contact-method">
+            <span class="icon solid alt fa-phone"></span>
+            <h3>Phone</h3>
+            <a href="tel:{{ site.contact.phone_link | replace: ' ', '' }}">{{ site.contact.phone_display }}</a>
+          </div>
+        </section>
+        <section>
+          <div class="contact-method">
+            <span class="icon solid alt fa-home"></span>
+            <h3>Address</h3>
+            <span>{{ site.contact.area }}<br />
+										{{ site.contact.city }}<br /></span>
+          </div>
+        </section>
       </section>
-      <section>
-        <div class="contact-method">
-          <span class="icon solid alt fa-phone"></span>
-          <h3>Phone</h3>
-          <a href="tel:+15135164075">+1 (513) 516-4075</a>
-        </div>
-      </section>
-      <section>
-        <div class="contact-method">
-          <span class="icon solid alt fa-home"></span>
-          <h3>Address</h3>
-          <span>New York, NY<br>United States</span>
-        </div>
-      </section>
-    </section>
   </div>
 </section>
+
+<!-- Single popup (no duplicates) -->
+<div id="form-popup"
+     role="dialog"
+     aria-modal="true"
+     aria-hidden="true"
+     class="popup success"
+     style="position:fixed; inset:0; display:none; align-items:center; justify-content:center; z-index:10000;">
+  <div class="inner"
+       style="background:#2a2f4a; max-width:520px; width:calc(100% - 2rem); padding:2rem; border-radius:0.5rem; box-shadow:0 1rem 2rem rgba(0,0,0,.35); text-align:center;">
+    <h3 class="major" style="margin:0 0 0.75rem 0;">Message sent</h3>
+    <p id="form-popup-text" style="margin:0 0 1.25rem 0;">Thanks! We’ll get back to you shortly.</p>
+    <div class="success-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="green"/>
+      </svg>
+    </div>
+    <ul class="actions" style="margin:0;">
+      <li><a href="#" id="form-popup-close" class="button small">Close</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- JSON-LD LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"{{ site.title | escape }}",
+  "telephone":"{{ site.phone | escape }}",
+  "email":"{{ site.email | escape }}",
+  "url":"{{ site.url | append: site.baseurl | escape }}"
+}
+</script>
+
+<!-- Inline JS (can be moved to assets/js/main.js) -->

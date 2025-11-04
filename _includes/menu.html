@@ -1,20 +1,25 @@
 <nav id="menu">
   <div class="inner">
     <ul class="links">
-      <li><a href="index.html#one">Services</a></li>
-      <li><a href="index.html#two">About</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-
-      <li><a href="services/flooring.html">Flooring</a></li>
-      <li><a href="services/tiles.html">Tile Work</a></li>
-      <li><a href="services/wallpaper.html">Wallpaper</a></li>
-      <li><a href="services/painting.html">Painting</a></li>
-      <li><a href="services/furniture.html">Furniture</a></li>
-      <li><a href="services/curtains.html">Curtains & Repairs</a></li>
-      <li><a href="services/handyman.html">General Handyman</a></li>
+      <li><a href="flooring.html">Flooring</a></li>
+      <li><a href="tiles.html">Tile Work</a></li>
+      <li><a href="wallpaper.html">Wallpaper</a></li>
+      <li><a href="painting.html">Painting</a></li>
+      <li><a href="furniture.html">Furniture</a></li>
+      <li><a href="curtains.html">Curtains & Repairs</a></li>
+      <li><a href="handyman.html">General Handyman</a></li>
     </ul>
 
-    <!-- ОБЯЗАТЕЛЬНО: кнопка закрытия, именно класс .close -->
+    <div class="contact-method">
+      <span class="icon solid alt fa-phone"></span>
+      <a href="tel:{{ site.contact.phone_link | replace: ' ', '' }}">{{ site.contact.phone_display }}</a>
+    </div>
+    <div class="contact-method">
+        <span class="icon solid alt fa-envelope"></span>
+        <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+      </div>
+
+    <!-- Close button -->
     <a href="#" class="close">Close</a>
   </div>
 </nav>
