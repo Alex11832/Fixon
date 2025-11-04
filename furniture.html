@@ -170,47 +170,108 @@ description: "Professional furniture assembly in New York — clean, careful, an
 
 </main>
 
+<!-- JSON-LD: LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "{{ site.company | default: site.title }}",
+  "image": "{{ site.url }}{{ site.baseurl }}/assets/images/furniture/furniture-hero-1600.webp",
+  "url": "{{ site.url }}{{ site.baseurl }}/",
+  "telephone": "{{ site.phone }}",
+  "email": "{{ site.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.address.street }}",
+    "addressLocality": "{{ site.address.city }}",
+    "addressRegion": "{{ site.address.region }}",
+    "postalCode": "{{ site.address.postcode }}",
+    "addressCountry": "{{ site.address.country }}"
+  },
+  "description": "Professional handyman services — furniture assembly, flooring, painting, and installations across New York."
+}
+</script>
+
 <!-- JSON-LD: Service -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Service",
-  "name":"Furniture Assembly",
-  "provider":{
-    "@type":"LocalBusiness",
-    "name":"{{ site.company | default: site.title }}",
-    "address":"{{ site.address }}",
-    "telephone":"{{ site.phone }}",
-    "email":"{{ site.email }}"
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Furniture Assembly",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "{{ site.company | default: site.title }}",
+    "telephone": "{{ site.phone }}",
+    "email": "{{ site.email }}",
+    "url": "{{ site.url }}{{ site.baseurl }}/"
   },
-  "areaServed":"New York City, USA",
-  "description":"Professional indoor and outdoor furniture assembly — precise, clean, and ready-to-use results.",
-  "url":"{{ site.url }}{{ site.baseurl }}/furniture.html"
+  "areaServed": {
+    "@type": "Place",
+    "name": "New York City"
+  },
+  "description": "Professional indoor and outdoor furniture assembly by {{ site.company | default: site.title }} — clean, aligned, and stable results.",
+  "url": "{{ site.url }}{{ site.baseurl }}/furniture.html"
 }
 </script>
 
 <!-- JSON-LD: FAQPage -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"Do you assemble furniture from any brand?","acceptedAnswer":{"@type":"Answer","text":"Yes, we handle IKEA, Wayfair, West Elm, and custom orders with all required tools and experience."}},
-    {"@type":"Question","name":"Can you assemble outdoor furniture?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. We assemble and level patio sets, tighten joints, and ensure long-term stability."}},
-    {"@type":"Question","name":"Do you remove packaging and clean afterward?","acceptedAnswer":{"@type":"Answer","text":"Yes. We remove all packaging, wipe down surfaces, and leave your space spotless."}}
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you assemble furniture from any brand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we assemble IKEA, Wayfair, West Elm, and custom furniture with full precision and tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you assemble outdoor furniture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We assemble and level patio furniture, tighten joints, and ensure stability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you remove packaging and clean afterward?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We remove all packaging, wipe down surfaces, and leave your home spotless."
+      }
+    }
   ]
 }
 </script>
 
-<!-- JSON-LD: Breadcrumbs -->
+<!-- JSON-LD: BreadcrumbList -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"{{ site.url }}{{ site.baseurl }}/"},
-    {"@type":"ListItem","position":2,"name":"Services","item":"{{ site.url }}{{ site.baseurl }}/services.html"},
-    {"@type":"ListItem","position":3,"name":"Furniture Assembly","item":"{{ site.url }}{{ site.baseurl }}/furniture.html"}
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.url }}{{ site.baseurl }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "{{ site.url }}{{ site.baseurl }}/services.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Furniture Assembly",
+      "item": "{{ site.url }}{{ site.baseurl }}/furniture.html"
+    }
   ]
 }
 </script>

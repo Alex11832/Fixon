@@ -169,21 +169,46 @@ permalink: /handyman.html
 
 </main>
 
+<!-- JSON-LD: LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "{{ site.company | default: site.title }}",
+  "image": "{{ site.url }}{{ site.baseurl }}/assets/images/handyman/handyman-hero-1600.webp",
+  "url": "{{ site.url }}{{ site.baseurl }}/",
+  "telephone": "{{ site.phone }}",
+  "email": "{{ site.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.address.street }}",
+    "addressLocality": "{{ site.address.city }}",
+    "addressRegion": "{{ site.address.region }}",
+    "postalCode": "{{ site.address.postcode }}",
+    "addressCountry": "{{ site.address.country }}"
+  },
+  "description": "Professional handyman and mounting services — furniture, pictures, mirrors, shelves, and more across New York."
+}
+</script>
+
 <!-- JSON-LD: Service -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Picture Hanging & Wall Art",
+  "serviceType": "Picture Hanging & Wall Mounting",
   "provider": {
     "@type": "LocalBusiness",
     "name": "{{ site.company | default: site.title }}",
-    "address": "{{ site.address }}",
     "telephone": "{{ site.phone }}",
-    "email": "{{ site.email }}"
+    "email": "{{ site.email }}",
+    "url": "{{ site.url }}{{ site.baseurl }}/"
   },
-  "areaServed": "New York City, USA",
-  "description": "Professional picture hanging and wall art installation with laser alignment, correct anchors, and perfect symmetry.",
+  "areaServed": {
+    "@type": "Place",
+    "name": "New York City"
+  },
+  "description": "Professional picture hanging, mirrors, and wall-mounted installations with laser alignment, proper anchors, and clean finishing.",
   "url": "{{ site.url }}{{ site.baseurl }}/handyman.html"
 }
 </script>
@@ -199,7 +224,7 @@ permalink: /handyman.html
       "name": "Do you handle heavy frames and mirrors?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we use appropriate anchors and distribute load safely for drywall, studs, and masonry walls."
+        "text": "Yes, we use proper anchors and distribute weight safely across drywall, studs, and masonry."
       }
     },
     {
@@ -207,30 +232,45 @@ permalink: /handyman.html
       "name": "Can you create gallery walls or symmetrical pairs?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Absolutely. We design layouts with equal spacing and perfect alignment using professional laser tools."
+        "text": "Absolutely. We design and install symmetrical wall layouts with perfect alignment using laser tools."
       }
     },
     {
       "@type": "Question",
-      "name": "Is the installation dust-free and clean?",
+      "name": "Is the installation clean and dust-free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we drill precisely, capture dust, and clean up before leaving — your room stays spotless."
+        "text": "Yes, all drilling is dust-controlled and we clean up completely after installation."
       }
     }
   ]
 }
 </script>
 
-<!-- JSON-LD: Breadcrumbs -->
+<!-- JSON-LD: BreadcrumbList -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}{{ site.baseurl }}/" },
-    { "@type": "ListItem", "position": 2, "name": "Services", "item": "{{ site.url }}{{ site.baseurl }}/services.html" },
-    { "@type": "ListItem", "position": 3, "name": "Picture Hanging & Wall Art", "item": "{{ site.url }}{{ site.baseurl }}/handyman.html" }
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.url }}{{ site.baseurl }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "{{ site.url }}{{ site.baseurl }}/services.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Picture Hanging & Wall Mounting",
+      "item": "{{ site.url }}{{ site.baseurl }}/handyman.html"
+    }
   ]
 }
 </script>

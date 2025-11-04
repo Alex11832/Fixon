@@ -1,7 +1,7 @@
 title: "ONIITO — Handyman in New York"
 company: "ONIITO"
 description: "Professional home repair, installation and decoration across NYC."
-url: "https://oniito.com/"
+url: "https://oniito.com"
 baseurl: ""
 markdown: kramdown
 permalink: /:path/:basename:output_ext

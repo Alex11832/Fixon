@@ -111,21 +111,109 @@ permalink: /flooring.html
 <!-- Contacts / form -->
 {% include contacts.html %}
 
-<!-- JSON-LD -->
+<!-- JSON-LD: LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "{{ site.company | default: site.title }}",
+  "image": "{{ site.url }}{{ site.baseurl }}/assets/images/flooring/flooring-hero-1600.webp",
+  "url": "{{ site.url }}{{ site.baseurl }}/",
+  "telephone": "{{ site.phone }}",
+  "email": "{{ site.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.address.street }}",
+    "addressLocality": "{{ site.address.city }}",
+    "addressRegion": "{{ site.address.region }}",
+    "postalCode": "{{ site.address.postcode }}",
+    "addressCountry": "{{ site.address.country }}"
+  },
+  "description": "Professional home improvement and handyman services — flooring, painting, furniture, curtains and more."
+}
+</script>
+
+<!-- JSON-LD: Service -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Laminate & Flooring Installation",
+  "serviceType": "Laminate & Flooring Installation",
   "provider": {
     "@type": "LocalBusiness",
     "name": "{{ site.company | default: site.title }}",
-    "address": "{{ site.address }}",
     "telephone": "{{ site.phone }}",
-    "email": "{{ site.email }}"
+    "email": "{{ site.email }}",
+    "url": "{{ site.url }}{{ site.baseurl }}/"
   },
-  "areaServed": "New York City, USA",
-  "description": "Professional laminate and hardwood flooring installation by {{ site.company | default: site.title }} — clean, level, and stylish floors.",
+  "areaServed": {
+    "@type": "Place",
+    "name": "New York City"
+  },
+  "description": "Professional laminate and hardwood flooring installation by {{ site.company | default: site.title }} — clean, level, and stylish floors with matte finish and precise seams.",
   "url": "{{ site.url }}{{ site.baseurl }}/flooring.html"
 }
 </script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you install laminate and hardwood floors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we install both laminate and hardwood flooring with precision leveling and seamless transitions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you remove old flooring before installation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we remove existing floors, prepare the base, and ensure perfect leveling before new installation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which areas do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ site.company | default: site.title }} serves all New York City boroughs and nearby regions."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- JSON-LD: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.url }}{{ site.baseurl }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "{{ site.url }}{{ site.baseurl }}/services.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Laminate & Flooring",
+      "item": "{{ site.url }}{{ site.baseurl }}/flooring.html"
+    }
+  ]
+}
+</script>
+

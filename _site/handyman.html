@@ -13,7 +13,7 @@
 <meta name="theme-color" content="#ffffff">
 
 <meta name="description" content="Professional picture hanging in New York — level, safe, and perfectly aligned gallery walls, pairs, and feature pieces.">
-<link rel="canonical" href="https://oniito.com//handyman.html">
+<link rel="canonical" href="https://oniito.com/handyman.html">
 <link rel="stylesheet" href="/assets/css/main.css?v=1.0.0">
 <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css?v=1.0.0">
 <noscript><link rel="stylesheet" href="/assets/css/noscript.css?v=1.0.0"></noscript>
@@ -295,7 +295,7 @@
         <!-- honeypot -->
         <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;">
 
-        <input type="hidden" name="page_url" value="https://oniito.com//handyman.html">
+        <input type="hidden" name="page_url" value="https://oniito.com/handyman.html">
         <input type="hidden" name="page" value="General Mounting — {{ site.company | default: site.title }}">
 
         <ul class="actions">
@@ -356,38 +356,51 @@
   </div>
 </div>
 
-<!-- JSON-LD LocalBusiness -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"LocalBusiness",
-  "name":"ONIITO — Handyman in New York",
-  "telephone":"",
-  "email":"",
-  "url":"https://oniito.com/"
-}
-</script>
-
 <!-- Inline JS (can be moved to assets/js/main.js) -->
 
 </main>
+
+<!-- JSON-LD: LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ONIITO",
+  "image": "https://oniito.com/assets/images/handyman/handyman-hero-1600.webp",
+  "url": "https://oniito.com/",
+  "telephone": "",
+  "email": "",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "",
+    "addressLocality": "",
+    "addressRegion": "",
+    "postalCode": "",
+    "addressCountry": ""
+  },
+  "description": "Professional handyman and mounting services — furniture, pictures, mirrors, shelves, and more across New York."
+}
+</script>
 
 <!-- JSON-LD: Service -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Picture Hanging & Wall Art",
+  "serviceType": "Picture Hanging & Wall Mounting",
   "provider": {
     "@type": "LocalBusiness",
     "name": "ONIITO",
-    "address": "",
     "telephone": "",
-    "email": ""
+    "email": "",
+    "url": "https://oniito.com/"
   },
-  "areaServed": "New York City, USA",
-  "description": "Professional picture hanging and wall art installation with laser alignment, correct anchors, and perfect symmetry.",
-  "url": "https://oniito.com//handyman.html"
+  "areaServed": {
+    "@type": "Place",
+    "name": "New York City"
+  },
+  "description": "Professional picture hanging, mirrors, and wall-mounted installations with laser alignment, proper anchors, and clean finishing.",
+  "url": "https://oniito.com/handyman.html"
 }
 </script>
 
@@ -402,7 +415,7 @@
       "name": "Do you handle heavy frames and mirrors?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we use appropriate anchors and distribute load safely for drywall, studs, and masonry walls."
+        "text": "Yes, we use proper anchors and distribute weight safely across drywall, studs, and masonry."
       }
     },
     {
@@ -410,30 +423,45 @@
       "name": "Can you create gallery walls or symmetrical pairs?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Absolutely. We design layouts with equal spacing and perfect alignment using professional laser tools."
+        "text": "Absolutely. We design and install symmetrical wall layouts with perfect alignment using laser tools."
       }
     },
     {
       "@type": "Question",
-      "name": "Is the installation dust-free and clean?",
+      "name": "Is the installation clean and dust-free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we drill precisely, capture dust, and clean up before leaving — your room stays spotless."
+        "text": "Yes, all drilling is dust-controlled and we clean up completely after installation."
       }
     }
   ]
 }
 </script>
 
-<!-- JSON-LD: Breadcrumbs -->
+<!-- JSON-LD: BreadcrumbList -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://oniito.com//" },
-    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://oniito.com//services.html" },
-    { "@type": "ListItem", "position": 3, "name": "Picture Hanging & Wall Art", "item": "https://oniito.com//handyman.html" }
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://oniito.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://oniito.com/services.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Picture Hanging & Wall Mounting",
+      "item": "https://oniito.com/handyman.html"
+    }
   ]
 }
 </script>

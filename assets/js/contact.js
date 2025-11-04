@@ -45,7 +45,7 @@ async function sendToTelegram(payload) {
     `*Phone:* ${esc(payload.phone)}\n` +
     (payload.email ? `*Email:* ${esc(payload.email)}\n` : '') +
     (payload.comment ? `*Message:* ${esc(payload.comment)}\n` : '') +
-    `*Page:* ${esc(payload.page_title)} — ${esc(payload.page_url)}\n`;
+    `*Page:* ${esc(payload.page_url)}\n`;
 
   const url = `https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`;
   const body = { chat_id: TG_CHAT_ID, text: msg, parse_mode: 'MarkdownV2', disable_web_page_preview: true };

@@ -13,7 +13,7 @@
 <meta name="theme-color" content="#ffffff">
 
 <meta name="description" content="Professional furniture assembly in New York — clean, careful, and precise setup for indoor and outdoor pieces.">
-<link rel="canonical" href="https://oniito.com//furniture.html">
+<link rel="canonical" href="https://oniito.com/furniture.html">
 <link rel="stylesheet" href="/assets/css/main.css?v=1.0.0">
 <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css?v=1.0.0">
 <noscript><link rel="stylesheet" href="/assets/css/noscript.css?v=1.0.0"></noscript>
@@ -297,7 +297,7 @@
         <!-- honeypot -->
         <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;">
 
-        <input type="hidden" name="page_url" value="https://oniito.com//furniture.html">
+        <input type="hidden" name="page_url" value="https://oniito.com/furniture.html">
         <input type="hidden" name="page" value="Furniture Assembly — {{ site.company | default: site.title }}">
 
         <ul class="actions">
@@ -358,63 +358,112 @@
   </div>
 </div>
 
-<!-- JSON-LD LocalBusiness -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"LocalBusiness",
-  "name":"ONIITO — Handyman in New York",
-  "telephone":"",
-  "email":"",
-  "url":"https://oniito.com/"
-}
-</script>
-
 <!-- Inline JS (can be moved to assets/js/main.js) -->
 
 </main>
 
+<!-- JSON-LD: LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ONIITO",
+  "image": "https://oniito.com/assets/images/furniture/furniture-hero-1600.webp",
+  "url": "https://oniito.com/",
+  "telephone": "",
+  "email": "",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "",
+    "addressLocality": "",
+    "addressRegion": "",
+    "postalCode": "",
+    "addressCountry": ""
+  },
+  "description": "Professional handyman services — furniture assembly, flooring, painting, and installations across New York."
+}
+</script>
+
 <!-- JSON-LD: Service -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Service",
-  "name":"Furniture Assembly",
-  "provider":{
-    "@type":"LocalBusiness",
-    "name":"ONIITO",
-    "address":"",
-    "telephone":"",
-    "email":""
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Furniture Assembly",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "ONIITO",
+    "telephone": "",
+    "email": "",
+    "url": "https://oniito.com/"
   },
-  "areaServed":"New York City, USA",
-  "description":"Professional indoor and outdoor furniture assembly — precise, clean, and ready-to-use results.",
-  "url":"https://oniito.com//furniture.html"
+  "areaServed": {
+    "@type": "Place",
+    "name": "New York City"
+  },
+  "description": "Professional indoor and outdoor furniture assembly by ONIITO — clean, aligned, and stable results.",
+  "url": "https://oniito.com/furniture.html"
 }
 </script>
 
 <!-- JSON-LD: FAQPage -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"Do you assemble furniture from any brand?","acceptedAnswer":{"@type":"Answer","text":"Yes, we handle IKEA, Wayfair, West Elm, and custom orders with all required tools and experience."}},
-    {"@type":"Question","name":"Can you assemble outdoor furniture?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. We assemble and level patio sets, tighten joints, and ensure long-term stability."}},
-    {"@type":"Question","name":"Do you remove packaging and clean afterward?","acceptedAnswer":{"@type":"Answer","text":"Yes. We remove all packaging, wipe down surfaces, and leave your space spotless."}}
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you assemble furniture from any brand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we assemble IKEA, Wayfair, West Elm, and custom furniture with full precision and tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you assemble outdoor furniture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We assemble and level patio furniture, tighten joints, and ensure stability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you remove packaging and clean afterward?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We remove all packaging, wipe down surfaces, and leave your home spotless."
+      }
+    }
   ]
 }
 </script>
 
-<!-- JSON-LD: Breadcrumbs -->
+<!-- JSON-LD: BreadcrumbList -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://oniito.com//"},
-    {"@type":"ListItem","position":2,"name":"Services","item":"https://oniito.com//services.html"},
-    {"@type":"ListItem","position":3,"name":"Furniture Assembly","item":"https://oniito.com//furniture.html"}
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://oniito.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://oniito.com/services.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Furniture Assembly",
+      "item": "https://oniito.com/furniture.html"
+    }
   ]
 }
 </script>

@@ -170,47 +170,108 @@ permalink: /painting.html
 
 </main>
 
-<!-- JSON-LD: Service -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Service",
-  "name":"Interior Painting",
-  "provider":{
-    "@type":"LocalBusiness",
-    "name":"{{ site.company | default: site.title }}",
-    "address":"{{ site.address }}",
-    "telephone":"{{ site.phone }}",
-    "email":"{{ site.email }}"
-  },
-  "areaServed":"New York City, USA",
-  "description":"Matte interior painting with careful prep, crisp lines, and low-odor finishes for a premium, non-glare look.",
-  "url":"{{ site.url }}{{ site.baseurl }}/painting.html"
-}
-</script>
+  <!-- JSON-LD: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "{{ site.company | default: site.title }}",
+    "image": "{{ site.url }}{{ site.baseurl }}/assets/images/painting/painting-hero-1600.webp",
+    "url": "{{ site.url }}{{ site.baseurl }}/",
+    "telephone": "{{ site.phone }}",
+    "email": "{{ site.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ site.address.street }}",
+      "addressLocality": "{{ site.address.city }}",
+      "addressRegion": "{{ site.address.region }}",
+      "postalCode": "{{ site.address.postcode }}",
+      "addressCountry": "{{ site.address.country }}"
+    },
+    "description": "Professional handyman services — painting, flooring, furniture, and installations in New York."
+  }
+  </script>
 
-<!-- JSON-LD: FAQPage -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"Do you use low-VOC paints?","acceptedAnswer":{"@type":"Answer","text":"Yes, premium low-VOC lines with minimal odor and fast curing."}},
-    {"@type":"Question","name":"How do you protect furniture and floors?","acceptedAnswer":{"@type":"Answer","text":"Plastic wrap, drop cloths, masked edges, and HEPA dust control during sanding."}},
-    {"@type":"Question","name":"Will matte show defects?","acceptedAnswer":{"@type":"Answer","text":"Matte hides minor texture better than gloss; we still skim and sand for a flawless result."}}
-  ]
-}
-</script>
+  <!-- JSON-LD: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Interior Painting",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "{{ site.company | default: site.title }}",
+      "telephone": "{{ site.phone }}",
+      "email": "{{ site.email }}",
+      "url": "{{ site.url }}{{ site.baseurl }}/"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "New York City"
+    },
+    "description": "Matte interior painting by {{ site.company | default: site.title }} — smooth finish, crisp lines, low odor, and clean handover.",
+    "url": "{{ site.url }}{{ site.baseurl }}/painting.html"
+  }
+  </script>
 
-<!-- JSON-LD: Breadcrumbs -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"{{ site.url }}{{ site.baseurl }}/"},
-    {"@type":"ListItem","position":2,"name":"Services","item":"{{ site.url }}{{ site.baseurl }}/services.html"},
-    {"@type":"ListItem","position":3,"name":"Interior Painting","item":"{{ site.url }}{{ site.baseurl }}/painting.html"}
-  ]
-}
-</script>
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you use low-VOC paints?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we use premium low-VOC paints with minimal odor and quick drying time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you protect furniture and floors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We cover furniture and floors with plastic wrap and drop cloths, and use HEPA filters for sanding."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will matte paint highlight defects?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Matte hides surface imperfections better than gloss, but we still skim and sand walls for a perfect finish."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "{{ site.url }}{{ site.baseurl }}/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "{{ site.url }}{{ site.baseurl }}/services.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Interior Painting",
+        "item": "{{ site.url }}{{ site.baseurl }}/painting.html"
+      }
+    ]
+  }
+  </script>

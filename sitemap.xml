@@ -4,7 +4,7 @@ layout: none
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>{{ site.url }}{{ site.baseurl }}/</loc>
+    <loc>{{ site.url }}{{ site.baseurl }}//</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <priority>1.0</priority>
   </url>
@@ -13,7 +13,7 @@ layout: none
   {% for p in pages %}
     {% unless p.url == '/' or p.path == 'index.html' %}
     <url>
-      <loc>{{ site.url | append: site.baseurl | append: p.url | replace: '//', '/' }}</loc>
+      <loc>{{ site.url | append: site.baseurl | append: p.url }}</loc>
       <lastmod>{{ p.date | date_to_xmlschema | default: site.time | date_to_xmlschema }}</lastmod>
       <priority>0.8</priority>
     </url>

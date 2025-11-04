@@ -13,7 +13,7 @@
 <meta name="theme-color" content="#ffffff">
 
 <meta name="description" content="Professional laminate and hardwood flooring installation in New York — clean, level, and stylish floors.">
-<link rel="canonical" href="https://oniito.com//flooring.html">
+<link rel="canonical" href="https://oniito.com/flooring.html">
 <link rel="stylesheet" href="/assets/css/main.css?v=1.0.0">
 <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css?v=1.0.0">
 <noscript><link rel="stylesheet" href="/assets/css/noscript.css?v=1.0.0"></noscript>
@@ -239,7 +239,7 @@
         <!-- honeypot -->
         <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;">
 
-        <input type="hidden" name="page_url" value="https://oniito.com//flooring.html">
+        <input type="hidden" name="page_url" value="https://oniito.com/flooring.html">
         <input type="hidden" name="page" value="Laminate &amp; Flooring — {{ site.company | default: site.title }}">
 
         <ul class="actions">
@@ -300,38 +300,114 @@
   </div>
 </div>
 
-<!-- JSON-LD LocalBusiness -->
+<!-- Inline JS (can be moved to assets/js/main.js) -->
+
+<!-- JSON-LD: LocalBusiness -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"LocalBusiness",
-  "name":"ONIITO — Handyman in New York",
-  "telephone":"",
-  "email":"",
-  "url":"https://oniito.com/"
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ONIITO",
+  "image": "https://oniito.com/assets/images/flooring/flooring-hero-1600.webp",
+  "url": "https://oniito.com/",
+  "telephone": "",
+  "email": "",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "",
+    "addressLocality": "",
+    "addressRegion": "",
+    "postalCode": "",
+    "addressCountry": ""
+  },
+  "description": "Professional home improvement and handyman services — flooring, painting, furniture, curtains and more."
 }
 </script>
 
-<!-- Inline JS (can be moved to assets/js/main.js) -->
-
-<!-- JSON-LD -->
+<!-- JSON-LD: Service -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Laminate & Flooring Installation",
+  "serviceType": "Laminate & Flooring Installation",
   "provider": {
     "@type": "LocalBusiness",
     "name": "ONIITO",
-    "address": "",
     "telephone": "",
-    "email": ""
+    "email": "",
+    "url": "https://oniito.com/"
   },
-  "areaServed": "New York City, USA",
-  "description": "Professional laminate and hardwood flooring installation by ONIITO — clean, level, and stylish floors.",
-  "url": "https://oniito.com//flooring.html"
+  "areaServed": {
+    "@type": "Place",
+    "name": "New York City"
+  },
+  "description": "Professional laminate and hardwood flooring installation by ONIITO — clean, level, and stylish floors with matte finish and precise seams.",
+  "url": "https://oniito.com/flooring.html"
 }
 </script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you install laminate and hardwood floors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we install both laminate and hardwood flooring with precision leveling and seamless transitions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you remove old flooring before installation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we remove existing floors, prepare the base, and ensure perfect leveling before new installation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which areas do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ONIITO serves all New York City boroughs and nearby regions."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- JSON-LD: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://oniito.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://oniito.com/services.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Laminate & Flooring",
+      "item": "https://oniito.com/flooring.html"
+    }
+  ]
+}
+</script>
+
 
 
       <!-- Footer -->
