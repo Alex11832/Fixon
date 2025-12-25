@@ -5,10 +5,8 @@ description: "Professional laminate and hardwood flooring installation in New Yo
 permalink: /flooring.html
 ---
 
-{% include menu.html %}
-
 <!-- Main -->
-<div id="main" class="alt">
+<main id="main" class="alt">
 
   <!-- Hero -->
   <section id="one">
@@ -21,17 +19,17 @@ permalink: /flooring.html
         <picture>
           <!-- Mobile -->
           <source
-            srcset="./images/flooring/flooring-hero-640.webp 640w,
-                    ./images/flooring/flooring-hero-960.webp 960w"
+            srcset="/assets/images/flooring/flooring-hero-640.webp 640w,
+                    /assets/images/flooring/flooring-hero-960.webp 960w"
             sizes="(max-width: 736px) 100vw"
             media="(max-width: 736px)">
           <!-- Desktop -->
           <img
-            src="./images/flooring/flooring-hero-1600.webp"
-            srcset="./images/flooring/flooring-hero-960.webp 960w,
-                    ./images/flooring/flooring-hero-1600.webp 1600w"
+            src="/assets/images/flooring/flooring-hero-1600.webp"
+            srcset="/assets/images/flooring/flooring-hero-960.webp 960w,
+                    /assets/images/flooring/flooring-hero-1600.webp 1600w"
             sizes="(min-width: 981px) 100vw, 100vw"
-            alt="Ripple fold matte curtains on a ceiling track with blackout lining — final result by {{ site.company | default: site.title }} in New York"
+            alt="Matte laminate flooring with flush seams and consistent plank alignment - final result by {{ site.company | default: site.title }} in New York"
             width="1600" height="700"
             fetchpriority="high" decoding="async">
         </picture>
@@ -51,11 +49,11 @@ permalink: /flooring.html
         <div class="col-6 col-12-small">
           <span class="image fit">
             <img
-              src="./images/flooring/flooring-work-01-1280.webp"
-              srcset="./images/flooring/flooring-work-01-960.webp 960w,
-                      ./images/flooring/flooring-work-01-1280.webp 1280w"
+              src="/assets/images/flooring/flooring-work-01-1280.webp"
+              srcset="/assets/images/flooring/flooring-work-01-960.webp 960w,
+                      /assets/images/flooring/flooring-work-01-1280.webp 1280w"
               sizes="(min-width: 981px) 50vw, 100vw"
-              alt="Blackout matte curtains with tight returns and minimal light gaps — final result in NYC bedroom"
+              alt="Oak plank flooring with seamless transitions and subtle sheen - final result in NYC bedroom"
               width="1280" height="720" loading="lazy" decoding="async">
           </span>
         </div>
@@ -74,11 +72,11 @@ permalink: /flooring.html
         <div class="col-6 col-12-small imp-small">
           <span class="image fit">
             <img
-              src="./images/flooring/flooring-work-02-1280.webp"
-              srcset="./images/flooring/flooring-work-02-960.webp 960w,
-                      ./images/flooring/flooring-work-02-1280.webp 1280w"
+              src="/assets/images/flooring/flooring-work-02-1280.webp"
+              srcset="/assets/images/flooring/flooring-work-02-960.webp 960w,
+                      /assets/images/flooring/flooring-work-02-1280.webp 1280w"
               sizes="(min-width: 981px) 50vw, 100vw"
-              alt="Blackout matte curtains with tight returns and minimal light gaps — final result in NYC bedroom"
+              alt="Waterproof laminate floor with crisp grout-free joins - final result in Manhattan living room"
               width="1280" height="720" loading="lazy" decoding="async">
           </span>
         </div>
@@ -89,11 +87,11 @@ permalink: /flooring.html
         <div class="col-6 col-12-small">
           <span class="image fit">
             <img
-              src="./images/flooring/flooring-work-03-1280.webp"
-              srcset="./images/flooring/flooring-work-03-960.webp 960w,
-                      ./images/flooring/flooring-work-03-1280.webp 1280w"
+              src="/assets/images/flooring/flooring-work-03-1280.webp"
+              srcset="/assets/images/flooring/flooring-work-03-960.webp 960w,
+                      /assets/images/flooring/flooring-work-03-1280.webp 1280w"
               sizes="(min-width: 981px) 50vw, 100vw"
-              alt="Blackout matte curtains with tight returns and minimal light gaps — final result in NYC bedroom"
+              alt="Dark hardwood floor with satin finish and even board spacing - final result in Brooklyn interior"
               width="1280" height="720" loading="lazy" decoding="async">
           </span>
         </div>
@@ -106,32 +104,10 @@ permalink: /flooring.html
     </div>
   </section>
 
-</div>
+</main>
 
 <!-- Contacts / form -->
 {% include contacts.html %}
-
-<!-- JSON-LD: LocalBusiness -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "{{ site.company | default: site.title }}",
-  "image": "{{ site.url }}{{ site.baseurl }}/assets/images/flooring/flooring-hero-1600.webp",
-  "url": "{{ site.url }}{{ site.baseurl }}/",
-  "telephone": "{{ site.phone }}",
-  "email": "{{ site.email }}",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "{{ site.address.street }}",
-    "addressLocality": "{{ site.address.city }}",
-    "addressRegion": "{{ site.address.region }}",
-    "postalCode": "{{ site.address.postcode }}",
-    "addressCountry": "{{ site.address.country }}"
-  },
-  "description": "Professional home improvement and handyman services — flooring, painting, furniture, curtains and more."
-}
-</script>
 
 <!-- JSON-LD: Service -->
 <script type="application/ld+json">
@@ -142,7 +118,7 @@ permalink: /flooring.html
   "provider": {
     "@type": "LocalBusiness",
     "name": "{{ site.company | default: site.title }}",
-    "telephone": "{{ site.phone }}",
+    "telephone": "{{ site.phone_raw }}",
     "email": "{{ site.email }}",
     "url": "{{ site.url }}{{ site.baseurl }}/"
   },
@@ -204,12 +180,6 @@ permalink: /flooring.html
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Services",
-      "item": "{{ site.url }}{{ site.baseurl }}/services.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
       "name": "Laminate & Flooring",
       "item": "{{ site.url }}{{ site.baseurl }}/flooring.html"
     }

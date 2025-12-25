@@ -5,15 +5,13 @@ description: "Professional tile installation for bathrooms, kitchens, and floors
 permalink: /tiles.html
 ---
 
-{% include menu.html %}
-
-<main id="main" class="alt" itemscope itemtype="https://schema.org/Service">
+<main id="main" class="alt">
 
   <!-- Hero -->
   <section id="hero" class="hero">
     <div class="inner">
       <header class="major">
-        <h1 itemprop="name">Tile Installation</h1>
+        <h1>Tile Installation</h1>
       </header>
 
       <span class="image main">
@@ -21,16 +19,16 @@ permalink: /tiles.html
         <picture>
           <!-- Mobile portrait -->
           <source
-            srcset="./images/tiles/tiles-hero-640.webp 640w,
-                    ./images/tiles/tiles-hero-960.webp 960w"
+            srcset="/assets/images/tiles/tiles-hero-640.webp 640w,
+                    /assets/images/tiles/tiles-hero-960.webp 960w"
             sizes="(max-width: 736px) 100vw" 
             media="(max-width: 736px)">
           <!-- Desktop landscape -->
           <img
-            src="./images/tiles/tiles-hero-1600.webp"
-            srcset="./images/tiles/tiles-hero-960.webp 960w,
-                    ./images/tiles/tiles-hero-1280.webp 1280w,
-                    ./images/tiles/tiles-hero-1600.webp 1600w"
+            src="/assets/images/tiles/tiles-hero-1600.webp"
+            srcset="/assets/images/tiles/tiles-hero-960.webp 960w,
+                    /assets/images/tiles/tiles-hero-1280.webp 1280w,
+                    /assets/images/tiles/tiles-hero-1600.webp 1600w"
             sizes="(min-width: 981px) 100vw, 100vw"
             alt="Bathroom with perfectly aligned tiles and waterproof grout — final result by {{ site.company | default: site.title }} in New York"
             width="1600" height="700"
@@ -38,7 +36,7 @@ permalink: /tiles.html
         </picture>
       </span>
 
-      <p itemprop="description">{{ site.company | default: site.title }} installs wall and floor tiles with millimeter-accurate alignment: straight grout lines, even spacing, and a durable waterproof finish — ready to use, no mess.</p>
+      <p>{{ site.company | default: site.title }} installs wall and floor tiles with millimeter-accurate alignment: straight grout lines, even spacing, and a durable waterproof finish — ready to use, no mess.</p>
     </div>
   </section>
 
@@ -66,9 +64,9 @@ permalink: /tiles.html
         <div class="col-6 col-12-small">
           <span class="image fit">
             <img
-              src="./images/tiles/tiles-work-01-1280.webp"
-              srcset="./images/tiles/tiles-work-01-960.webp 960w,
-                      ./images/tiles/tiles-work-01-1280.webp 1280w"
+              src="/assets/images/tiles/tiles-work-01-1280.webp"
+              srcset="/assets/images/tiles/tiles-work-01-960.webp 960w,
+                      /assets/images/tiles/tiles-work-01-1280.webp 1280w"
               sizes="(min-width: 981px) 50vw, 100vw"
               alt="Shower niche and wall tiles with even grout — final result by {{ site.company | default: site.title }} in NYC"
               width="1280" height="720" loading="lazy" decoding="async">
@@ -89,9 +87,9 @@ permalink: /tiles.html
         <div class="col-6 col-12-small imp-small">
           <span class="image fit">
             <img
-              src="./images/tiles/tiles-work-02-1280.webp"
-              srcset="./images/tiles/tiles-work-02-960.webp 960w,
-                      ./images/tiles/tiles-work-02-1280.webp 1280w"
+              src="/assets/images/tiles/tiles-work-02-1280.webp"
+              srcset="/assets/images/tiles/tiles-work-02-960.webp 960w,
+                      /assets/images/tiles/tiles-work-02-1280.webp 1280w"
               sizes="(min-width: 981px) 50vw, 100vw"
               alt="Large-format porcelain floor with flush joints — final result by {{ site.company | default: site.title }} in Manhattan"
               width="1280" height="720" loading="lazy" decoding="async">
@@ -104,9 +102,9 @@ permalink: /tiles.html
         <div class="col-6 col-12-small">
           <span class="image fit">
             <img
-              src="./images/tiles/tiles-work-03-1280.webp"
-              srcset="./images/tiles/tiles-work-03-960.webp 960w,
-                      ./images/tiles/tiles-work-03-1280.webp 1280w"
+              src="/assets/images/tiles/tiles-work-03-1280.webp"
+              srcset="/assets/images/tiles/tiles-work-03-960.webp 960w,
+                      /assets/images/tiles/tiles-work-03-1280.webp 1280w"
               sizes="(min-width: 981px) 50vw, 100vw"
               alt="Kitchen backsplash with symmetric cuts around outlets — final result by {{ site.company | default: site.title }} in Brooklyn"
               width="1280" height="720" loading="lazy" decoding="async">
@@ -134,28 +132,28 @@ permalink: /tiles.html
   </section>
 
   <!-- FAQ -->
-  <section id="faq" itemscope itemtype="https://schema.org/FAQPage">
+  <section id="faq">
     <div class="inner">
       <header class="major"><h2 class="section-title">FAQ</h2></header>
 
-      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <h3 itemprop="name">Do you install large-format tiles?</h3>
-        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">Yes. We use leveling clips and correct trowel/back-buttering to eliminate lippage.</p>
+      <div>
+        <h3>Do you install large-format tiles?</h3>
+        <div>
+          <p>Yes. We use leveling clips and correct trowel/back-buttering to eliminate lippage.</p>
         </div>
       </div>
 
-      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <h3 itemprop="name">Is waterproofing included?</h3>
-        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">Wet zones get membrane treatment and sealed corners; this is part of our scope.</p>
+      <div>
+        <h3>Is waterproofing included?</h3>
+        <div>
+          <p>Wet zones get membrane treatment and sealed corners; this is part of our scope.</p>
         </div>
       </div>
 
-      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <h3 itemprop="name">How fast can you start?</h3>
-        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">Typically within 2–5 days after confirmation and material delivery.</p>
+      <div>
+        <h3>How fast can you start?</h3>
+        <div>
+          <p>Typically within 2–5 days after confirmation and material delivery.</p>
         </div>
       </div>
     </div>
@@ -167,29 +165,7 @@ permalink: /tiles.html
 
 </main>
 
- <!-- JSON-LD: LocalBusiness -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "{{ site.company | default: site.title }}",
-  "image": "{{ site.url }}{{ site.baseurl }}/assets/images/tiles/tiles-hero-1600.webp",
-  "url": "{{ site.url }}{{ site.baseurl }}/",
-  "telephone": "{{ site.phone }}",
-  "email": "{{ site.email }}",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "{{ site.address.street }}",
-    "addressLocality": "{{ site.address.city }}",
-    "addressRegion": "{{ site.address.region }}",
-    "postalCode": "{{ site.address.postcode }}",
-    "addressCountry": "{{ site.address.country }}"
-  },
-  "description": "Professional handyman services — tile installation, flooring, painting, and repairs across New York."
-}
-</script>
-
-<!-- JSON-LD: Service -->
+ <!-- JSON-LD: Service -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -198,7 +174,7 @@ permalink: /tiles.html
   "provider": {
     "@type": "LocalBusiness",
     "name": "{{ site.company | default: site.title }}",
-    "telephone": "{{ site.phone }}",
+    "telephone": "{{ site.phone_raw }}",
     "email": "{{ site.email }}",
     "url": "{{ site.url }}{{ site.baseurl }}/"
   },
@@ -260,12 +236,6 @@ permalink: /tiles.html
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Services",
-      "item": "{{ site.url }}{{ site.baseurl }}/services.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
       "name": "Tile Installation",
       "item": "{{ site.url }}{{ site.baseurl }}/tiles.html"
     }
